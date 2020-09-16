@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

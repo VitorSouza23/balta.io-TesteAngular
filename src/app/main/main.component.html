@@ -1,0 +1,12 @@
+<h1 class="title animate__animated animate__tada">{{ title }}</h1>
+<app-todos-list [todos]="todos" *ngIf="mode==viewMode.List"></app-todos-list>
+<app-todos-upsert [todos]="todos" (viewModeChange)="changeMode($event)" *ngIf="mode==viewMode.Add"></app-todos-upsert>
+
+<button class="add-button button animate__animated animate__fadeInUp" (click)="changeMode(viewMode.Add)" *ngIf="mode==viewMode.List">
+  <i class="fas fa-plus-circle"></i>
+  Nova Tarefa
+</button>
+<button class="add-button button animate__animated animate__fadeInUp" (click)="changeMode(viewMode.List)" *ngIf="mode==viewMode.Add">
+  <i class="fas fa-times"></i>
+  Cancelar
+</button>
